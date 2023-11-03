@@ -1,0 +1,190 @@
+.appMainContainer {
+  background: #06152b;
+}
+.headerContainer {
+  padding: 92px 82px;
+  display: flex;
+  justify-content: space-between;
+}
+.logoContainer {
+  display: flex;
+}
+.raritiTitle {
+  padding-left: 9px;
+  color: #fff;
+  font-family: "saira";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.getInTouchButton {
+  padding: 15px 20px;
+  border-radius: 15px;
+  border: 1px solid rgba(245, 251, 242, 0.44);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) -30.29%,
+    rgba(255, 255, 255, 0) 144.92%
+  );
+  backdrop-filter: blur(25px);
+  color: var(--white, #fff);
+  font-family: "michroma";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%; /* 27px */
+  cursor: pointer;
+}
+.arrowIcon {
+  margin-left: 19px;
+  width: 21px;
+}
+.bodyContainer {
+  margin-top: 215px;
+  margin-left: 162px;
+}
+.slashSymbol {
+  color: #02aab0;
+  font-family: "Michroma";
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  padding-right: 8px;
+}
+.firstContent,
+.secondContent,
+.thirdContent {
+  color: var(--white, #fff);
+  font-family: Michroma;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  text-transform: uppercase;
+}
+.firstContent::after {
+  content: "\a";
+  white-space: pre;
+}
+.secondContent::after {
+  content: "\a";
+  white-space: pre;
+}
+.projectContainer {
+  margin-top: 290px;
+}
+.projectContainer {
+  display: flex;
+  justify-content: center;
+}
+.ourProjects {
+  color: var(--white, #fff);
+  font-family: Michroma;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+}
+.projectbuttonsContainer {
+  margin-top: 54px;
+  display: flex;
+  margin-left: 183px;
+  margin-right: 183px;
+  justify-content: space-between;
+  margin-bottom: 293px;
+}
+
+.radeButton {
+  display: flex;
+  border-radius: 15px;
+  border: 1px solid rgba(245, 251, 242, 0.44);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) -30.29%,
+    rgba(255, 255, 255, 0) 144.92%
+  );
+  backdrop-filter: blur(25px);
+  padding: 56px 59px;
+  cursor: pointer;
+}
+.radeIcon {
+  width: 45px;
+  height: 65px;
+  transform: rotate(0.37deg);
+  margin-right: 15px;
+}
+.radeTitle {
+  color: #fff;
+  font-family: "Exo";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.payezyButton {
+  display: flex;
+  border-radius: 15px;
+  border: 1px solid rgba(245, 251, 242, 0.44);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) -30.29%,
+    rgba(255, 255, 255, 0) 144.92%
+  );
+  backdrop-filter: blur(25px);
+  padding: 72px 36px;
+  cursor: pointer;
+}
+.tetherxButton {
+  display: flex;
+  border-radius: 15px;
+  border: 1px solid rgba(245, 251, 242, 0.44);
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.03) -30.29%,
+    rgba(255, 255, 255, 0) 144.92%
+  );
+  backdrop-filter: blur(25px);
+  padding: 72px 43px 66px 42px;
+  cursor: pointer;
+}
+.tethexTitle {
+  color: #fff;
+  font-family: "Zen Dots";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.getInTouchButton:hover,
+.payezyButton:hover,
+.tetherxButton:hover,
+.radeButton:hover {
+  box-shadow: 0 0 10px 0 #02aab0;
+  border: 1px solid #02aab0;
+}
+.footerContainer {
+  text-align: center;
+  padding-bottom: 15px;
+}
+.footerSlash {
+  font-family: "Michroma";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  color: #02aab0;
+}
+.footerContent {
+  color: var(--neutral-0, #fff);
+  font-family: "Saira";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 160%;
+  text-align: center;
+}
+.hyperlink {
+  text-decoration: none;
+}
