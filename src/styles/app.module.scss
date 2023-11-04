@@ -1,5 +1,5 @@
 .appMainContainer {
-  background: #06152b;
+  background: url("../assets/backgroundImage.svg");
 }
 .headerContainer {
   padding: 92px 82px;
@@ -138,7 +138,7 @@
 .projectContainer {
   display: flex;
   justify-content: center;
-  margin-top: 290px;
+  margin-top: 250px;
 }
 .projectContainerMob {
   margin-top: 130px;
