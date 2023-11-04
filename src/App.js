@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import styles from "./styles/app.module.scss";
 import raritiLogo from "../src/assets/raritiLogo.svg";
 import { APP_ENUM } from "./enums/appEnum";
@@ -5,90 +6,202 @@ import arrowIcon from "../src/assets/arrowIcon.svg";
 import radeIcon from "../src/assets/radeIcon.svg";
 import payezyIcon from "../src/assets/payezyIcon.svg";
 import tetherxIcon from "../src/assets/tetherxIcon.svg";
-import backgroundImage from "../src/assets/backgroundImage3.svg";
+import { useMediaQuery } from "react-responsive";
+import Modal from "react-modal";
+import cx from "classnames";
+import { AppContext } from "./context";
+import SupportModal from "./pages/SupportModal/SupportModal";
 function App() {
+  const isMobile = useMediaQuery({ query: "(max-width: 992px)" });
+  // State to set the Modal open or close
+  const [modalIsOpen, setModalIsOpen] = useState(false);
+  const handleOnClickButton = () => {
+    setModalIsOpen(true);
+  };
   return (
-    <div className={styles.appMainContainer}>
-      <div className={styles.headerContainer}>
-        <div className={styles.logoContainer}>
-          <img src={raritiLogo} alt="rariti-logo" />
-          <div className={styles.raritiTitle}>{APP_ENUM.raritiTitle}</div>
-        </div>
-        <div className={styles.buttonContainer}>
-          <button className={styles.getInTouchButton}>
-            {APP_ENUM.getInTouchButton}
-            <img
-              src={arrowIcon}
-              alt="arrow-icon"
-              className={styles.arrowIcon}
-            />
-          </button>
-        </div>
-      </div>
-      <div className={styles.bodyContainer}>
-        <span className={styles.slashSymbol}>/</span>
-        <span className={styles.firstContent}>
-          Building products and services
-        </span>
-        <span className={styles.secondContent}>
-          that augments access to blockchain
-        </span>
-        <span className={styles.thirdContent}> technologies</span>
-      </div>
-      <div className={styles.projectContainer}>
-        <span className={styles.slashSymbol}>/</span>
-        <span className={styles.ourProjects}>Our Projects</span>
-      </div>
-      <div className={styles.projectbuttonsContainer}>
-        <a
-          href="https://www.rade.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.hyperlink}
-        >
-          <div className={styles.radeButton}>
-            <img src={radeIcon} alt="rade-icon" className={styles.radeIcon} />
-            <span className={styles.radeTitle}>RADE</span>
+    <>
+      <AppContext.Provider value={{ isMobile }}>
+        <div className={styles.appMainContainer}>
+          <div
+            className={cx(styles.headerContainer, {
+              [styles.headerContainerMob]: isMobile,
+            })}
+          >
+            <div className={styles.logoContainer}>
+              <img
+                src={raritiLogo}
+                alt="rariti-logo"
+                className={cx(styles.raritiLogo, {
+                  [styles.raritiLogoMob]: isMobile,
+                })}
+              />
+              <div
+                className={cx(styles.raritiTitle, {
+                  [styles.raritiTitleMob]: isMobile,
+                })}
+              >
+                {APP_ENUM.raritiTitle}
+              </div>
+            </div>
+            <div className={styles.buttonContainer}>
+              <button
+                className={cx(styles.getInTouchButton, {
+                  [styles.getInTouchButtonMob]: isMobile,
+                })}
+                onClick={handleOnClickButton}
+              >
+                {APP_ENUM.getInTouchButton}
+                <img
+                  src={arrowIcon}
+                  alt="arrow-icon"
+                  className={cx(styles.arrowIcon, {
+                    [styles.arrowIconMob]: isMobile,
+                  })}
+                />
+              </button>
+            </div>
           </div>
-        </a>
-        <a
-          href="https://www.payezy.io/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.hyperlink}
-        >
-          <div className={styles.payezyButton}>
-            <img
-              src={payezyIcon}
-              alt="payezy-icon"
-              className={styles.payezyIcon}
-            />
+          {!isMobile && (
+            <div className={styles.bodyContainer}>
+              <span className={styles.slashSymbol}>/</span>
+              <span className={styles.firstContent}>
+                Building products and services
+              </span>
+              <span className={styles.secondContent}>
+                that augments access to blockchain
+              </span>
+              <span className={styles.thirdContent}> technologies</span>
+            </div>
+          )}
+          {isMobile && (
+            <div className={styles.bodyContainerMob}>
+              <span className={styles.slashSymbolMob}>/</span>
+              <span className={styles.firstContentMob}>
+                Building products and services that augments access to
+                blockchain technologies
+              </span>
+            </div>
+          )}
+          <div
+            className={cx(styles.projectContainer, {
+              [styles.projectContainerMob]: isMobile,
+            })}
+          >
+            <span
+              className={cx(styles.slashSymbol, {
+                [styles.slashSymbolMob]: isMobile,
+              })}
+            >
+              /
+            </span>
+            <span
+              className={cx(styles.ourProjects, {
+                [styles.ourProjectsMob]: isMobile,
+              })}
+            >
+              Our Projects
+            </span>
           </div>
-        </a>
-        <a
-          href="https://www.tetherx.co.in/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.hyperlink}
-        >
-          <div className={styles.tetherxButton}>
-            <span className={styles.tethexTitle}>tether</span>
-            <img
-              src={tetherxIcon}
-              alt="tetherX-icon"
-              className={styles.tetherxIcon}
-            />
+          <div
+            className={cx(styles.projectbuttonsContainer, {
+              [styles.projectbuttonsContainerMob]: isMobile,
+            })}
+          >
+            <a
+              href="https://www.rade.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.hyperlink}
+            >
+              <div
+                className={cx(styles.radeButton, {
+                  [styles.radeButtonMob]: isMobile,
+                })}
+              >
+                <img
+                  src={radeIcon}
+                  alt="rade-icon"
+                  className={cx(styles.radeIcon, {
+                    [styles.radeIconMob]: isMobile,
+                  })}
+                />
+                <span
+                  className={cx(styles.radeTitle, {
+                    [styles.radeTitleMob]: isMobile,
+                  })}
+                >
+                  RADE
+                </span>
+              </div>
+            </a>
+            <a
+              href="https://www.payezy.io/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.hyperlink}
+            >
+              <div
+                className={cx(styles.payezyButton, {
+                  [styles.payezyButtonMob]: isMobile,
+                })}
+              >
+                <img
+                  src={payezyIcon}
+                  alt="payezy-icon"
+                  className={cx(styles.payezyIcon, {
+                    [styles.payezyIconMob]: isMobile,
+                  })}
+                />
+              </div>
+            </a>
+            <a
+              href="https://www.tetherx.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.hyperlink}
+            >
+              <div
+                className={cx(styles.tetherxButton, {
+                  [styles.tetherxButtonMob]: isMobile,
+                })}
+              >
+                <span
+                  className={cx(styles.tethexTitle, {
+                    [styles.tethexTitleMob]: isMobile,
+                  })}
+                >
+                  tether
+                </span>
+                <img
+                  src={tetherxIcon}
+                  alt="tetherX-icon"
+                  className={cx(styles.tetherxIcon, {
+                    [styles.tetherxIconMob]: isMobile,
+                  })}
+                />
+              </div>
+            </a>
           </div>
-        </a>
-      </div>
 
-      <div className={styles.footerContainer}>
-        <span className={styles.footerSlash}>/</span>
-        <span className={styles.footerContent}>
-          © Copyright 2023 Rariti, Inc.
-        </span>
-      </div>
-    </div>
+          <div className={styles.footerContainer}>
+            <span className={styles.footerSlash}>/</span>
+            <span className={styles.footerContent}>
+              © Copyright 2023 Rariti, Inc.
+            </span>
+          </div>
+        </div>
+
+        <Modal
+          isOpen={modalIsOpen}
+          overlayClassName={styles.popupOverlay}
+          className={styles.popupContent}
+          shouldCloseOnOverlayClick={false}
+          ariaHideApp={false}
+        >
+          <SupportModal setModalIsOpen={setModalIsOpen} />
+        </Modal>
+      </AppContext.Provider>
+    </>
   );
 }
 

@@ -6,8 +6,18 @@
   display: flex;
   justify-content: space-between;
 }
+.headerContainerMob {
+  padding: 40px 25px;
+}
 .logoContainer {
   display: flex;
+}
+.raritiLogo {
+  width: 43px;
+}
+.raritiLogoMob {
+  width: 25px;
+  height: 43px;
 }
 .raritiTitle {
   padding-left: 9px;
@@ -17,6 +27,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.raritiTitleMob {
+  font-size: 30px;
 }
 .getInTouchButton {
   padding: 15px 20px;
@@ -35,14 +48,45 @@
   font-weight: 400;
   line-height: 150%; /* 27px */
   cursor: pointer;
+  margin-top: 8px;
+}
+.getInTouchButtonMob {
+  font-size: 11px;
+  line-height: 20px;
+  padding: 8px 12px;
+  margin-top: 3px;
 }
 .arrowIcon {
   margin-left: 19px;
   width: 21px;
 }
+.arrowIconMob {
+  margin-left: 10px;
+  width: 15px;
+}
 .bodyContainer {
-  margin-top: 215px;
+  margin-top: 155px;
   margin-left: 162px;
+  @media screen and (max-width: 1400px) {
+    margin-left: 160px;
+  }
+  @media screen and (max-width: 1350px) {
+    margin-left: 140px;
+  }
+  @media screen and (max-width: 1300px) {
+    margin-left: 120px;
+  }
+  @media screen and (max-width: 1290px) {
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+  }
+}
+.bodyContainerMob {
+  margin-top: 110px;
+  margin-left: 0px;
+  margin-right: 0px;
+  text-align: center;
 }
 .slashSymbol {
   color: #02aab0;
@@ -53,17 +97,36 @@
   line-height: 150%;
   padding-right: 8px;
 }
+.slashSymbolMob {
+  font-size: 20px;
+  color: #02aab0;
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  line-height: 23px;
+  padding-right: 8px;
+}
 .firstContent,
 .secondContent,
 .thirdContent {
   color: var(--white, #fff);
-  font-family: Michroma;
+  font-family: "Michroma";
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
   text-transform: uppercase;
 }
+.firstContentMob {
+  color: var(--white, #fff);
+  font-family: "Michroma";
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 25px;
+}
+
 .firstContent::after {
   content: "\a";
   white-space: pre;
@@ -73,19 +136,24 @@
   white-space: pre;
 }
 .projectContainer {
-  margin-top: 290px;
-}
-.projectContainer {
   display: flex;
   justify-content: center;
+  margin-top: 290px;
+}
+.projectContainerMob {
+  margin-top: 130px;
 }
 .ourProjects {
   color: var(--white, #fff);
-  font-family: Michroma;
+  font-family: "Michroma";
   font-size: 36px;
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
+}
+.ourProjectsMob {
+  font-size: 18px;
+  line-height: 143%;
 }
 .projectbuttonsContainer {
   margin-top: 54px;
@@ -94,8 +162,42 @@
   margin-right: 183px;
   justify-content: space-between;
   margin-bottom: 293px;
+  @media screen and (max-width: 1400px) {
+    margin-left: 160px;
+    margin-right: 160px;
+  }
+  @media screen and (max-width: 1350px) {
+    margin-left: 140px;
+    margin-right: 140px;
+  }
+  @media screen and (max-width: 1300px) {
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  @media screen and (max-width: 1250px) {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+  @media screen and (max-width: 1200px) {
+    margin-left: 80px;
+    margin-right: 80px;
+  }
+  @media screen and (max-width: 1150px) {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  @media screen and (max-width: 1000px) {
+    margin-left: 40px;
+    margin-right: 40px;
+  }
 }
-
+.projectbuttonsContainerMob {
+  flex-direction: column;
+  gap: 25px;
+  margin-left: 40px;
+  margin-right: 40px;
+  margin-bottom: 50px;
+}
 .radeButton {
   display: flex;
   border-radius: 15px;
@@ -108,12 +210,24 @@
   backdrop-filter: blur(25px);
   padding: 61px 60px;
   cursor: pointer;
+  @media screen and (max-width: 1150px) {
+    padding: 61px 40px;
+  }
+}
+.radeButtonMob {
+  padding: 35px 60px;
+  justify-content: center;
 }
 .radeIcon {
   width: 45px;
   height: 65px;
   transform: rotate(0.37deg);
   margin-right: 15px;
+}
+.radeIconMob {
+  width: 38px;
+  height: 47px;
+  margin-right: 10px;
 }
 .radeTitle {
   color: #fff;
@@ -122,6 +236,9 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.radeTitleMob {
+  font-size: 38px;
 }
 .payezyButton {
   display: flex;
@@ -135,6 +252,21 @@
   backdrop-filter: blur(25px);
   padding: 72px 36px;
   cursor: pointer;
+  @media screen and (max-width: 1150px) {
+    padding: 72px 30px;
+  }
+}
+.payezyButtonMob {
+  padding: 44px 36px;
+  justify-content: center;
+}
+.payezyIcon {
+  width: 247px;
+  height: 42px;
+}
+.payezyIconMob {
+  width: 200px;
+  height: 30px;
 }
 .tetherxButton {
   display: flex;
@@ -148,6 +280,13 @@
   backdrop-filter: blur(25px);
   padding: 72px 43px 66px 42px;
   cursor: pointer;
+  @media screen and (max-width: 1150px) {
+    padding: 72px 30px 66px 30px;
+  }
+}
+.tetherxButtonMob {
+  justify-content: center;
+  padding: 44px 43px 44px 42px;
 }
 .tethexTitle {
   color: #fff;
@@ -156,6 +295,17 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+}
+.tethexTitleMob {
+  font-size: 28px;
+}
+.tetherxIcon {
+  width: 69px;
+  height: 39px;
+}
+.tetherxIconMob {
+  width: 50px;
+  height: 32px;
 }
 .getInTouchButton:hover,
 .payezyButton:hover,
@@ -187,4 +337,26 @@
 }
 .hyperlink {
   text-decoration: none;
+}
+.popupOverlay {
+  position: fixed;
+  inset: 0px;
+  background: rgba(196, 196, 196, 0.15);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+.popupContent {
+  background: #081527;
+  border: 2px solid var(--Green-grad, #02aab0);
+  width: 25%;
+  border-radius: 10px;
+  height: auto;
+  @media screen and (max-width: 992px) {
+    width: 100%;
+    margin-left: 14px;
+    margin-right: 14px;
+  }
 }
