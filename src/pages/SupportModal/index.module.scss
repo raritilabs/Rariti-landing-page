@@ -1,0 +1,49 @@
+.modalContainer {
+  padding-top: 25px;
+  padding-bottom: 25px;
+  text-align: center;
+  @media screen and (max-width: 992px) {
+    padding-top: 18px;
+  }
+}
+.slashSymbol {
+  font-family: "Metrophobic";
+  font-size: 22px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #02aab0;
+  margin-right: 2px;
+}
+.firstContent {
+  color: var(--white, #fff);
+  font-family: "Metrophobic";
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.firstContentMob {
+  font-size: 26px;
+}
+.email {
+  margin-top: 16px;
+  color: #fff;
+  font-family: "Metrophobic";
+  font-size: 21px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.crossIconContainer {
+  display: flex;
+  justify-content: end;
+  padding-right: 16px;
+}
+.crossIcon {
+  width: 15px;
+  height: 15px;
+}
+.crossIcon:hover {
+  cursor: pointer;
+}

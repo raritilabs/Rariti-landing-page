@@ -7,6 +7,7 @@ import "@fontsource/michroma";
 import "@fontsource/exo";
 import "@fontsource/zen-dots";
 import "@fontsource/saira";
+import "@fontsource/metrophobic";
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
