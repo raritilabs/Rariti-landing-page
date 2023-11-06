@@ -108,7 +108,7 @@ function App() {
             })}
           >
             <a
-              href="https://www.rade.io/"
+              href="https://rade.rariti.io/"
               target="_blank"
               rel="noopener noreferrer"
               className={styles.hyperlink}
