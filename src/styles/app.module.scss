@@ -2,7 +2,7 @@
   background: url("../assets/backgroundImage.svg");
 }
 .headerContainer {
-  padding: 92px 82px;
+  padding: 50px 60px;
   display: flex;
   justify-content: space-between;
 }
@@ -65,7 +65,7 @@
   width: 15px;
 }
 .bodyContainer {
-  margin-top: 155px;
+  margin-top: 165px;
   margin-left: 162px;
   @media screen and (max-width: 1400px) {
     margin-left: 160px;
@@ -138,7 +138,7 @@
 .projectContainer {
   display: flex;
   justify-content: center;
-  margin-top: 250px;
+  margin-top: 290px;
 }
 .projectContainerMob {
   margin-top: 130px;
@@ -194,9 +194,10 @@
 .projectbuttonsContainerMob {
   flex-direction: column;
   gap: 25px;
-  margin-left: 40px;
-  margin-right: 40px;
+  margin-left: 60px;
+  margin-right: 60px;
   margin-bottom: 50px;
+  margin-top: 30px;
 }
 .radeButton {
   display: flex;
@@ -215,7 +216,7 @@
   }
 }
 .radeButtonMob {
-  padding: 35px 60px;
+  padding: 25px 60px;
   justify-content: center;
 }
 .radeIcon {
@@ -257,7 +258,7 @@
   }
 }
 .payezyButtonMob {
-  padding: 44px 36px;
+  padding: 35px 36px;
   justify-content: center;
 }
 .payezyIcon {
@@ -286,7 +287,7 @@
 }
 .tetherxButtonMob {
   justify-content: center;
-  padding: 44px 43px 44px 42px;
+  padding: 35px 43px 35px 42px;
 }
 .tethexTitle {
   color: #fff;
