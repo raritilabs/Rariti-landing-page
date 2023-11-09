@@ -11,8 +11,12 @@ import Modal from "react-modal";
 import cx from "classnames";
 import { AppContext } from "./context";
 import SupportModal from "./pages/SupportModal/SupportModal";
+import { Helmet } from "react-helmet";
+
 function App() {
   const isMobile = useMediaQuery({ query: "(max-width: 992px)" });
+  const imageUrl =
+    "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAvCAYAAAB6zDPWAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAOJSURBVHgBvVnNbtNAEJ5ZO9xA6QOAzJ1W6ZFfudCeac8UET9B2idI+gRpnyCW2gPHckc0CFGOWC0Hbo0gFcek7a00HmZNiEq6dnY3sb+LY++u9Xl25pvZCcIQ86+piQQbUAy2jvawAYYQo18xzEFxqFWqVAZDjMg6JWjwpQ/FoDz4DU0wxIhsFGKHLztQEBCh+mCdfJM14vpN4kcIHSgICFA3mS/GH8QEARQEJuubWPcG2W972CaAfSgIgqClPVf10HET6xYTbAjewivSkkwlWQ62Pr9kC4oCQl1HykTawNEubvMlgmJQjq8mJyTMGuSv9ZKXEBgLuCTAb39pML9/eQWL398mEqpEJtlpsbBOIV/e6M6XgX28h2tp4wJyhHCTrdUOVLbcapaUTSR7cbpcP//xYhUskASqYVbMShSZZM+6y+yv2EAhWr0T38ZvpXW3TbJiVqJIJdv75XuIWBvelt3SLaPU+A/SuuyLRjLIdYOnfJ624Ky7Eorx4CBaun33fRssML9OB9JqEyfyLrBs3lcNKS0rrSpUUYxoZV0JXesKB5ZSx1QP3YGblq9922DTqTl4+8NhqarEDbLn3edVXuZD6grRtA02rjk2IU3KEProZFv/pmXRydxq9jtPuK7VWS2zwCfYybKqxH9kpabyodGDCRCsEmzdifOUa6WUjVtXBpXGAXJEVgaV1FTQQ9kplaylbLyi0w6+0Y9BqQEGYHeoXvxc9sECsqJjgu3h7cfjXQx11iVke92VijAoOEaYQsoGMQcbwTt2i6rumiQpnJ+unOj4qgoUD4I79z6EUABEj7fSlqgECqcGBcGd4/TJvrdFhB5YIU6EvnLQ8sDhdIoGH07QiZ4Foe70mRXflc+tfQQ0ORkkoAEFuoRnV3zHiX4aAx1s8q5oZcSZkY2eBm3epzaYowwu2B/FbUFEm2ABFFhLfH4CZko2ehxECGTT3CtjCSd2ZmZ+YIwvLVunCH7lU8vPmjJzstFS0Cckq24Ou0Nmzza3vsHiYXgCFslG+n30JFAqS259A6mfYAE+pNbTpCw3slNJWUldIOXakWHftbQubKikLFey0cOgQ2AZbAopy5VsgkvFMUYHCinLneyUUta6Hmz5W5YRPQpsG9Pe9bqhELISFE9VNyTWLYzsVFJ2629my7XzPY7Kl5aHMX5NCBiCVWWxULISlcPWBsaG/74j9kjQ2h9CAS4Nm1JBywAAAABJRU5ErkJggg==";
   // State to set the Modal open or close
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const handleOnClickButton = () => {
@@ -20,6 +24,11 @@ function App() {
   };
   return (
     <>
+      <Helmet>
+        <meta property="og:image" content={imageUrl} />
+        <meta property="og:image:width" content="800" />{" "}
+        <meta property="og:image:height" content="600" />{" "}
+      </Helmet>
       <AppContext.Provider value={{ isMobile }}>
         <div className={styles.appMainContainer}>
           <div
